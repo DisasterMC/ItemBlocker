@@ -1,0 +1,19 @@
+# Evitar que los jugadores puedan recoger esos items
+disable-player-pickup: true
+# Evitar que los jugadores puedan tirar esos items
+disable-player-drop: true
+# Evitar que los hoppers puedan recoger esos items
+disable-hoppers: true
+# Cerrar inventario al bloquear item
+close-on-block: false
+# Lista de items
+banned-items:
+  - DIAMOND_PICKAXE
+#       Messages
+# Poner null para evitar enviar mensaje
+block-message: '&4No puedes colocar eso.'
+drop-message: '&4No puedes soltar ese item'
+#No permission message
+no-permission: '&cNo tienes permisos'
+#Reload message
+reload-message: '&aConfiguracion recargada'

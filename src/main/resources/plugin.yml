@@ -1,0 +1,9 @@
+name: ItemBlocker
+version: 1.0.0
+author: PineAppleGrits
+main: org.sevencraft.itemblocker.Main
+api-version: 1.19
+commands:
+  itemblockerreload:
+    usage: /<command>
+    aliases: [ibr, itembr]
