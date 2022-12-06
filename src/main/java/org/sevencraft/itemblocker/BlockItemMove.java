@@ -19,7 +19,9 @@ public class BlockItemMove implements Listener {
         List<Material> bannedMaterials =  Main.getConfiguration().getStringList("banned-items").stream().map(materialName ->Material.getMaterial(materialName)).collect(Collectors.toList());
         boolean disablePlayerDrop  =  Main.getConfiguration().getBoolean("disable-player-drop");
         if (bannedMaterials.contains(event.getItemDrop().getItemStack().getType()) && disablePlayerDrop) {
-            event.getPlayer().sendMessage(ChatColor.translateAlternateColorCodes('&', Main.getConfiguration().getString("drop-message")));
+            String dropMessage = Main.getConfiguration().getString("drop-message");
+            if(dropMessage != null) event.getPlayer().sendMessage(ChatColor.translateAlternateColorCodes('&', dropMessage));
+
             event.setCancelled(true);
         }
     }
